@@ -28,7 +28,7 @@ namespace HashTables
             words = sentence.ToLower().Split(" ");
             foreach (String word in words)
             {
-                Console.WriteLine(word + " -->Added to HashTable");
+                Console.WriteLine(word + " --> Added to HashTable");
                 int value = myHashMap.Get(word);
                 if (value == 0)
                     value = 1;
@@ -38,6 +38,8 @@ namespace HashTables
             }
             frequency = myHashMap.Get("paranoid");
             Console.WriteLine("Frequency of word -->paranoid --> " + frequency);
+            Console.WriteLine("--------------------------------------");
+            myHashMap.Remove("avoidable");
             Console.ReadLine();
         }
     }
